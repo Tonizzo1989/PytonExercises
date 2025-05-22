@@ -14,7 +14,6 @@ Person = {
     "name": "Mario",
     "surname": "Rossi",
     "age": 30,
-
 }
 
 #Stampare il valore relativo alla chiave età
@@ -23,21 +22,34 @@ print(Person["age"])
 
 
 #Aggiungere al dizionario la coppia chiave valore email: mario.rossi@gmail.com
-Person.update({"email": "mario.rossi@gmail.com"})
+#Person.update({"email": "mario.rossi@gmail.com"})
+#Oppure
+Person["email"]="mario.rossi@gmail.com"
 print(Person)
 
 
 
 #Eliminare la chiave cognome#
-Person.pop("surname")
+#Person.pop("surname")
+del Person["surname"]
 print(Person)
 #Devi commentare questa riga altrimenti non stampa la chiave dandoti solo name, age e email
+
+print("------------")
+
+Person.clear()
+print(Person)
+
+print("------------------")
+
 
 
 
 #Creare una lista contenente tutte le chiavi presenti nel dizionario
 x = Person.keys()
 print(x)
+
+print("------------------")
 
 
 
@@ -53,6 +65,7 @@ print(Person)
 
 #Stampare a video il numero di elementi contenuti nelle liste e nel dizionario alla fine del programma
 print(len(Person))
+
 
 
 
