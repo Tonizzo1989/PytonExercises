@@ -3,7 +3,8 @@
 
 
 
-number = int(input("Enter a random number: "))
+number = eval(input("Enter a random number: "))
+print(number)
 
 if number > 0:
     print("number is positive")
@@ -11,6 +12,7 @@ elif number < 0:
     print("number is negative")
 else:
     print("number is null")
+    
     
 
 
@@ -24,15 +26,11 @@ else:
 # dall'utente con la funzione predefinita eval().
 
 
-
-str = input("Do you have any symptoms: ")
-if str == "cough":
-    print("You got Covid")
-elif str == "breathness":
-    print("You got Covid")
-elif str == "high fever":
-    print("You got Covid")
-elif str == "tiredness":
+tiredness = input("Do you have tiredness?: ")
+number = eval (input("How much your temp? :"))
+cough = input("Do you have cough? :")
+breathness = input("Dou have breathness?: ")
+if tiredness == "yes" and number > 37 and cough == "yes" and breathness == "yes":
     print("You got Covid")
 else:
     print("You're fine, just rest")
@@ -62,7 +60,7 @@ else:
 
 string = (input("Check if you're eligible for a scholarship, your score must be between 75 and 90."))
 grade = int(input("Your score: ")) 
-if grade >= 75 or grade >= 90:
+if grade >= 75 and grade <= 90:
  print("Great, you're eligible") 
 else:
  print("Sorry, you can't get that")
@@ -75,7 +73,6 @@ else:
 
  
 string = input("Did you login on website?")
-
 if string == "yes":
     age = int(input("Ok,how old are you? : "))
     ral = int(input("Your ral:"))
