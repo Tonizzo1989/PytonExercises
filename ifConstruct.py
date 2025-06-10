@@ -88,3 +88,9 @@ if string == "yes":
         print("Sorry, you can't travel for free")
 else:
     print("You need to log on")
+    
+    
+    
+        
+
+    
