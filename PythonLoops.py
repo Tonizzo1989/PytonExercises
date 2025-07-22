@@ -15,24 +15,30 @@ if numberList < 10 and numberList > 30:
 #2) Si crei un programma che calcoli la lunghezza della parola inserita 
 # fino a quando non viene inserita la parola exit.
 
-word = (input("Check the lenght: \n"))
-while word != " exit":
-    print(len(word))
-    word = input("Lenght checked")
+while True:
+   word = (input("Check lenght: \n"))
+   if word == "exit":
+       break
+   print(len(word))
+
+
      
-      
+    
 #3) Inseriti due interi da tastiera, a e b, si stampino tutti i numeri nell'intervallo [a, b] (estremi inclusi) 
 # ma escludendo i multipli di 3 e scambiando in automatico i valori di a e b nel caso in cui b fosse minore di a.
 
 a = int(input("Number a : "))
 b = int(input("Number b : "))
 
+if b < a:
+    inizio = b 
+    fine = a
+else:
+    inizio = a
+    fine = b
 interval = []
-for interval in range (1, 20, 3):
- print(interval)
-if interval %3!=0 and b < a:
- print(interval)
-
-
+for interval in range (inizio, fine +1):
+    if interval %3!=0:
+        print(interval)
 
 
